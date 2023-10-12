@@ -2,9 +2,6 @@
 
 This class provides methods to manage cookies in PHP applications.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/ezeasorekene/php-cookie-manager.svg?style=flat-square)](https://packagist.org/packages/ezeasorekene/php-cookie-manager)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 This PHP class provides convenient methods to manage cookies in web applications.
 
 ## Installation
