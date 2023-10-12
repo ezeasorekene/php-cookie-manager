@@ -13,6 +13,7 @@ You can install this package using Composer:
 
 ```bash
 composer require ezeasorekene/php-cookie-manager
+```
 
 ## Usage
 
