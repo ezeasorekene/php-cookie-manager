@@ -1,0 +1,18 @@
+{
+    "name": "ezeasorekene/php-cookie-manager",
+    "description": "This class provides methods to manage cookies in PHP applications.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ezeasorekene\\PhpCookieManager\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ekene Ezeasor",
+            "email": "ezeasorekene@gmail.com"
+        }
+    ],
+    "require": {}
+}

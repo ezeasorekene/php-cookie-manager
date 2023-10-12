@@ -32,7 +32,7 @@
  */
 
 
-namespace ezeasorekene\Utilities;
+namespace ezeasorekene\PhpCookieManager;
 
 class Cookie
 {
