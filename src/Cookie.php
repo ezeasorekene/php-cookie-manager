@@ -10,7 +10,7 @@
  * @author     Ekene Ezeasor
  * @copyright  Copyright (c) 2023, Ekene Ezeasor
  * @license    MIT
- * @version    2.0.0
+ * @version    2.1.0
  * @link       https://github.com/ezeasorekene/php-cookie-manager
  * @contact    ezeasorekene@gmail.com
  * 
@@ -111,9 +111,13 @@ class Cookie
      */
     public static function destroy($name, $options = [])
     {
+        $options = array_merge(self::$defaultOptions, $options);
         if (self::has($name)) {
-            $options = array_merge(self::$defaultOptions, $options);
-            return setcookie($name, '', time() - 3600, $options);
+            $expiry_option = [
+                'expires' => time() - 3600,
+            ];
+            $options = array_merge($options, $expiry_option);
+            return setcookie($name, '', $options);
         }
         return false;
     }
