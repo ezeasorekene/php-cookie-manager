@@ -6,13 +6,13 @@
  * This class provides methods to manage cookies in PHP applications.
  *
  * @category   Utilities
- * @package    ezeasorekene\Utilities\PHP-Cookie-Manager
- * @author     Your Name
- * @copyright  Copyright (c) [Year], Your Company
- * @license    [License]
- * @version    [Version]
- * @link       [GitHub Repository]
- * @contact    [Your Email]
+ * @package    ezeasorekene/php-cookie-manager
+ * @author     Ekene Ezeasor
+ * @copyright  Copyright (c) 2023, Ekene Ezeasor
+ * @license    MIT
+ * @version    2.0.0
+ * @link       https://github.com/ezeasorekene/php-cookie-manager
+ * @contact    ezeasorekene@gmail.com
  * 
  * @example    Usage Examples:
  *
@@ -33,6 +33,7 @@
 
 
 namespace ezeasorekene\PhpCookieManager;
+
 
 class Cookie
 {
@@ -141,12 +142,7 @@ class Cookie
      */
     public static function jsonSet($name, $value, $options = [])
     {
-        $options['expires'] = $options['expires'] ?? 0;
-        $options['path'] = $options['path'] ?? '/';
-        $options['domain'] = $options['domain'] ?? '';
-        $options['secure'] = $options['secure'] ?? false;
-        $options['httponly'] = $options['httponly'] ?? false;
-        $options['samesite'] = $options['samesite'] ?? 'Lax';
+        $options = array_merge(self::$defaultOptions, $options);
 
         if (is_array($value)) {
             $value = json_encode($value);
